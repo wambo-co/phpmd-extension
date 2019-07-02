@@ -1,0 +1,17 @@
+{
+    "name": "wambo-co/phpmd-extension",
+    "require": {
+        "phpmd/phpmd": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "Rene Penner",
+            "email": "rene@penner.name"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wambo\\CodeStyle\\": "codestyle"
+        }
+    }
+}

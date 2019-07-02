@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Wambo Rules"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        This Ruleset contains a collection of rules for wambo source code.
+    </description>
+
+    <rule name="ConditionOrder"
+          since="0.2"
+          message="Avoid conditions start with bool. like (false == $myVar)"
+          class="Wambo\CodeStyle\ConditionOrder">
+        <description>foobar description</description>
+        <priority>3</priority>
+        <example>
+            <![CDATA[
+                // bad
+                if (true === $myVar)
+                if (42 == $answerOfLife)
+
+                //good
+                if ($myVar === true)
+                if ($answerOfLife == 42)
+            ]]>
+        </example>
+    </rule>
+</ruleset>
